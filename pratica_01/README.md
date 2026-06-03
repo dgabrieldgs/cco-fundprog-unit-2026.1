@@ -1,94 +1,90 @@
-<h1 align="center">🚀 Guia de Entrega de Atividades - CCO 2026</h1>
+## [AULA] Lista de Exercícios 01: Fundamentos de Python
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git Badge"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
-</p>
-
-> **Bem-vindo(a) à nossa trilha de aprendizado!** Este repositório é o centro das nossas atividades práticas. Aqui, você não apenas aprenderá **Python**, mas também dominará o fluxo de trabalho real de um desenvolvedor profissional utilizando **Git** e **GitHub**.
+Esta lista de exercícios foca no domínio de **entrada/saída de dados**, **conversão de tipos (casting)**, **operadores matemáticos** e **lógica básica**.
 
 ---
 
-## 📂 Estrutura de Pastas
-
-Para manter o projeto organizado, utilizaremos uma estrutura de **Monorepo**. Cada aula terá sua própria pasta, e dentro dela, você criará a sua pasta individual para entrega:
-
-```text
-📦 Raiz do Repositório
-├── 📁 Aula-01-Introducao
-│   ├── 📄 README.md           <-- Instruções da Aula 01
-│   ├── 📁 joao-silva          <-- Pasta do aluno (Exemplo)
-│   │   └── 🐍 ex01.py
-│   └── 📁 maria-souza         <-- Pasta da aluna (Exemplo)
-│       └── 🐍 ex01.py
-├── 📁 Aula-02-Condicionais
-│   ├── 📄 README.md           <-- Instruções da Aula 02
-│   └── 📁 [sua-pasta-aqui]
-└── ⚙️ .gitignore              <-- Arquivo para ignorar lixo eletrônico
-```
+### 📋 Instruções de Entrega
+1. Siga o fluxo de repositório ensinado em sala: **Pull**, **Branch** e **Pasta Pessoal**.
+2. Crie um arquivo `.py` individual para cada exercício (ex: `ex01.py`, `ex02.py`).
+3. Realize o **commit** e envie o seu **Pull Request**.
 
 ---
 
-## 🛠️ Passo 1: Configuração Inicial
+### 💻 Exercício 1: O Registro do Sistema (I/O e Tipagem)
+Crie um programa que simule o registro de um novo usuário, solicitando as seguintes informações:
+* **Nome do usuário** (string).
+* **Ano de nascimento** (inteiro).
+* **Altura em metros** (float).
 
-> **Nota:** Este passo precisa ser feito **apenas uma vez** antes da sua primeira entrega.
+O programa deve calcular a idade atual e exibir a mensagem:
+> "Olá, [Nome]! Você tem [Idade] anos e sua altura é de [Altura]m. Registro concluído."
 
-1. **Fork:** No topo desta página, clique no botão `Fork`. Isso criará uma cópia exata deste repositório na sua conta pessoal.
-2. **Clone:** Abra o terminal no seu computador e baixe o seu fork (substitua pelo seu nome de usuário):
-   ```bash
-   git clone https://github.com/SEU_USUARIO/cco-fundprog-unit-2026.1.git
-   ```
-3. **Configurar o Upstream:** Para receber automaticamente as atualizações (novas aulas) que o professor postar, execute:
-   ```bash
-   git remote add upstream https://github.com/SEU_USUARIO/cco-fundprog-unit-2026.1.git
-   ```
+**Fórmula:**
+$$Idade = Ano_{Atual} - Ano_{Nascimento}$$
 
----
-
-## 🔁 Passo 2: O Ritual de Entrega (Toda Semana)
-
-Siga estes **5 passos** rigorosamente para garantir que sua atividade seja enviada e corrigida:
-
-### 1️⃣ Sincronize seu código
-Antes de começar, pegue as novidades que o professor postou:
-```bash
-git checkout main
-git pull upstream main
-git push origin main
-```
-
-### 2️⃣ Crie uma Branch para a Aula
-**Nunca trabalhe na branch `main`.** Crie uma "linha do tempo" separada para cada aula:
-```bash
-git checkout -b entrega-aula-01
-```
-
-### 3️⃣ Crie sua pasta e codifique
-1. Entre na pasta da aula vigente (ex: `cd Aula-01-Introducao`).
-2. Crie sua pasta seguindo o padrão exigido: `mkdir seu-nome-sobrenome` (sem espaços ou acentos).
-3. Salve seus arquivos `.py` dentro dela.
-
-### 4️⃣ Envie as alterações
-```bash
-git add .
-git commit -m "feat: entrega aula 01 - Seu Nome"
-git push origin entrega-aula-01
-```
-
-### 5️⃣ Abra o Pull Request (PR)
-1. Vá até o **seu repositório** no GitHub.
-2. Clique no botão verde **Compare & pull request**.
-3. No título, coloque exatamente: `[AULA 01] Nome Completo`.
-4. Clique em **Create Pull Request**.
+> **Dica:** Lembre-se de converter o ano de nascimento usando `int()` antes da subtração.
 
 ---
 
-## ⚠️ Regras de Ouro (Checklist)
+### 💰 Exercício 2: Calculadora de Freelancer (Matemática)
+Desenvolva um script para calcular o valor de um projeto freelancer solicitando:
+1. O valor cobrado por hora.
+2. A estimativa de horas para conclusão.
 
-Para que sua atividade seja avaliada, certifique-se de cumprir todos os itens abaixo:
+Exiba o **valor bruto**, o **valor dos impostos (15%)** e o **valor líquido final**.
 
-- [ ] **Nomenclatura:** Sua pasta pessoal deve seguir o padrão `nome-sobrenome` (tudo minúsculo e com hífen). Pastas com nomes como *projeto1* ou *exercicios* serão desconsideradas.
-- [ ] **Não altere o alheio:** Você só tem permissão para criar e editar arquivos dentro da **sua** pasta pessoal.
-- [ ] **Comentários no PR:** No Pull Request, sinta-se à vontade para escrever as dificuldades que teve ou o que aprendeu de novo na semana.
-- [ ] **Clean Code:** Use nomes de variáveis descritivos e claros (ex: `soma_notas` em vez de `s`).
+**Fórmulas:**
+* $Valor_{Bruto} = Horas \times Valor_{Hora}$
+* $Impostos = Valor_{Bruto} \times 0.15$
+* $Valor_{Liquido} = Valor_{Bruto} - Impostos$
+
+---
+
+### 🍕 Exercício 3: Divisão Justa (Divisão Inteira e Módulo)
+Crie um programa para dividir fatias de pizza entre uma equipe, perguntando:
+* O número total de fatias.
+* O número de programadores na equipe.
+
+Calcule e imprima quantas fatias inteiras cada um comerá e o resto que sobrará na caixa.
+
+**Fórmulas:**
+* $Fatias_{PorPessoa} = Total_{Fatias} // Programadores$
+* $Sobra = Total_{Fatias} \% Programadores$
+
+---
+
+### 🔐 Exercício 4: Verificador de Acesso (Lógica e Relacionais)
+Desenvolva um sistema de verificação que solicite a **idade** e os **anos de experiência** do usuário.
+
+**Regra Importante:** Não utilize `if/else`. O programa deve imprimir apenas `True` ou `False` para a condição de acesso.
+
+**Regra Lógica:**
+$$Acesso = (Idade \geq 18) \text{ AND } (Experiencia > 2)$$
+
+**Saída esperada:** "Acesso Liberado: True".
+
+---
+
+### 🚀 Exercício 5: Desafio do Download (Mistura de Conceitos)
+Calcule o tempo estimado de download solicitando:
+1. O tamanho do arquivo em **Megabytes (MB)**.
+2. A velocidade da internet em **Megabits por segundo (Mbps)**.
+
+**Regra de Negócio:** Considere que 1 Byte = 8 bits. Converta o tempo total para minutos inteiros e segundos restantes.
+
+**Fórmulas:**
+* $Tempo_{Segundos} = \frac{Tamanho_{MB}}{(Velocidade_{Mbps} / 8)}$
+* $Minutos_{Inteiros} = Tempo_{Segundos} // 60$
+* $Segundos_{Restantes} = Tempo_{Segundos} \% 60$
+
+**Saída:** "X minutos e Y segundos".
+
+---
+
+### 💡 Dica do Professor: F-Strings
+Para facilitar a impressão de textos com variáveis, utilize as **f-strings**:
+`print(f"O valor total do projeto é R$ {valor_liquido}")`
+### 💡 Dica do Professor: F-Strings
+[cite_start]Para facilitar a impressão de textos com variáveis, utilize as **f-strings**:
+[cite_start]`print(f"O valor total do projeto é R$ {valor_liquido}")`
